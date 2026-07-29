@@ -1,0 +1,10 @@
+# UI Framework
+streamlit>=1.42.0
+
+# Core Data & Image Processing
+pandas==2.2.2
+numpy==1.26.4
+pillow>=12.1.1
+
+# Networking
+requests==2.32.3

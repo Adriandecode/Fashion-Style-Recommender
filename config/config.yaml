@@ -1,0 +1,19 @@
+# --- Index Settings ---
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+
+# --- File Names ---
+files:
+  articles: "articles.csv"
+
+# --- Qdrant Database Settings ---
+qdrant:
+  host: "localhost"
+  port: 6333
+  collection_name: "hm_items"
+  vector_size: 384
+
+# --- Artificial Intelligence Model ---
+model:
+  name: "sentence-transformers/all-MiniLM-L6-v2"

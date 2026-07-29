@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hm-fashion-recommendation"
+version = "0.1.0"
+description = "H&M Recommendation System - End-to-End MLOps Refactoring"
+authors = [{name = "Enes Guler", email = "hello.enesguler@gmail.com"}]
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.pytest.ini_options]
+addopts = "-v --cov=src --cov-report=term-missing -p no:cacheprovider"
+pythonpath = "."
+testpaths = ["tests"]
+
+asyncio_mode = "auto"
+
+strict_markers = true
+
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+    "ignore::PendingDeprecationWarning:starlette.formparsers",
+    "ignore::SyntaxWarning:sentence_transformers.*"
+]
